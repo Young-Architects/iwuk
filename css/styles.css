@@ -1,0 +1,28 @@
+﻿﻿.card--icon {
+  @apply bg-white border border-[rgba(13,43,82,0.12)] rounded-xl p-6 shadow-lg grid grid-cols-[44px_1fr] gap-x-4 gap-y-1 items-start relative overflow-hidden;
+}
+
+.card--icon .icon {
+  @apply w-9 h-9 rounded-lg grid place-items-center bg-[#F0F6FF] text-brand font-bold row-span-2;
+}
+
+.card--icon::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: clamp(170px, 26vw, 210px);
+  height: clamp(170px, 26vw, 210px);
+  background: url("../assets/images/graphics/pattern-circles.svg") no-repeat
+    center/contain;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+[data-nav].is-open {
+  transform: translateY(0) !important;
+
+  [data-nav].is-open {
+    transform: translateX(0) !important;
+  }
+}
